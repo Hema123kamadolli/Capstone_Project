@@ -1,0 +1,21 @@
+﻿@model MVCBlogTracker.Models.Admin
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+@using (Html.BeginForm("Login", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(model => model.EmailId)
+    @Html.TextBoxFor(model => model.EmailId)
+    <br />
+    <br />
+    @Html.LabelFor(model => model.Password)
+    @Html.PasswordFor(model => model.Password)
+    <br />
+    <input type="submit" value="Login" />
+    
+}
+
